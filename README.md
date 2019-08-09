@@ -1,4 +1,4 @@
-# popup_dialog
+# Groceries Shopping App
 
 A new Flutter application for Groceries Shopping App .
 

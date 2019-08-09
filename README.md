@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/fruits.gif" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/fruits.gif"/>
 <img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_1.png" width="376" height="815" />
 <img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_2.png" width="376" height="815" />
 <img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_3.png" width="376" height="815" />

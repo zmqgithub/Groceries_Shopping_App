@@ -1,6 +1,6 @@
 # popup_dialog
 
-A new Flutter application for Anmated popup dialogs.
+A new Flutter application for Groceries Shopping App .
 
 ## Getting Started
 
@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/fruits.gif" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_1.png" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_2.png" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_3.png" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_4.png" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_5.png" width="376" height="815" />
+<img src="https://github.com/zmqgithub/Groceries_Shopping_App/blob/master/images/image_6.png" width="376" height="815" />

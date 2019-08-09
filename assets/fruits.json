@@ -1,0 +1,227 @@
+[
+  {
+    "image": "http://pngimg.com/uploads/banana/banana_PNG824.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#F7DC6F"
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2016/02/23/17/42/orange-1218158_960_720.png",
+    "name": "Orange",
+    "rate": "$1.0/Kg",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#A569BD"
+  },
+  {
+    "image": "http://pngimg.com/uploads/kiwi/kiwi_PNG4028.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#52BE80"
+  },
+  {
+    "image": "http://pngimg.com/uploads/pineapple/pineapple_PNG2733.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#0E6251"
+  },
+  {
+    "image": "http://pngimg.com/uploads/apricot/apricot_PNG12656.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#F7DC6F"
+  },
+  {
+    "image": "https://storage.needpix.com/rsynced_images/guava-2836148_1280.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#7DCEA0"
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2016/02/23/17/44/apple-1218166_960_720.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#F4D03F"
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Orange-fruit.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#A569BD"
+  },
+  {
+    "image": "https://cdn.pixabay.com/photo/2018/10/11/00/15/fruit-3738720_960_720.png",
+    "name": "Breaking Banana",
+    "rate": "$1.5/dozen",
+    "desc": "Bananas are extremely healthy and delicious.They contain several essential nutrients and provide benefits for digestion, heart health and weight loss.Aside from being very nutritious, they are also a highly convenient snack food. ",
+    "nutritions": {
+      "value": {
+        "value": "89",
+        "desc": "calories"
+      },
+      "fat": {
+        "value": "0.3 g",
+        "desc": "Fat"
+      },
+      "carbhyd": {
+        "value": "23 g",
+        "desc": "Carbohydrate"
+      },
+      "protein": {
+        "value": "1.1 g",
+        "desc": "Protein"
+      }
+    },
+    "color": "#27AE60"
+  }
+]

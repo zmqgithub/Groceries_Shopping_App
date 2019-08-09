@@ -8,6 +8,31 @@ import 'dart:ui' as ui;
 import 'package:flutter/services.dart';
 
 class SHSlider extends StatefulWidget {
+
+  final String path;
+  final int divisions;
+  final double min, max;
+  final String unit;
+  final double fontSize;
+  final double padding;
+  final double lineWidth;
+  final Color backgroundColor;
+  final Color color;
+  final void Function(double value) callback;
+
+  SHSlider({this.path,
+    this.divisions = 10,
+    this.min = 0,
+    this.max = 100,
+    this.unit = '',
+    this.fontSize = 20,
+    this.padding,
+    this.lineWidth = 2,
+    this.backgroundColor = Colors.blue,
+    this.color = Colors.black,
+    this.callback
+  });
+
   @override
   _SHSliderState createState() => _SHSliderState();
 }
@@ -19,23 +44,19 @@ class _SHSliderState extends State<SHSlider> with SingleTickerProviderStateMixin
   @override
   void initState() {
     _controller = AnimationController(vsync: this);
-    initImage();
+    initImage(widget.path);
     super.initState();
   }
 
   @override
   void dispose() {
     _controller.dispose();
-
     super.dispose();
   }
 
-  Future <Null> initImage() async {
-
-    final ByteData data = await rootBundle.load('assets/strwberry.png',);
-
+  Future <Null> initImage(path) async {
+    final ByteData data = await rootBundle.load(path,);
     image = await loadImage(new Uint8List.view(data.buffer));
-
     print(image.toString());
   }
 
@@ -50,13 +71,31 @@ class _SHSliderState extends State<SHSlider> with SingleTickerProviderStateMixin
     return completer.future;
   }
 
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Stack(children: <Widget>[
-    Center(child: CustomPaint(painter: Pointer(offset, image), size: Size(size.width, size.height/2),),),
+    return Container(
+      margin: EdgeInsets.only(top: 50),
+      height: 100, child: Stack(children: <Widget>[
+      Align(alignment: Alignment.bottomCenter,
+        child: CustomPaint(painter: Pointer(offset: offset,
+            image: image,
+            divisions: widget.divisions,
+            min: widget.min,
+            max: widget.max,
+            unit: widget.unit,
+            fontSize: widget.fontSize,
+            lineWidth: widget.lineWidth,
+            backgroundColor: widget.backgroundColor,
+            color: widget.color, callback: (value){
+//              print(value);
+              if(widget.callback != null)
+                widget.callback(value);
+            }),
+          size: Size(size.width, size.height)
+          ,),),
       Container(
+//        color: Colors.lightGreen.withOpacity(0.2),
         child: GestureDetector( onPanUpdate: (dragUpdate){
           print(dragUpdate.globalPosition);
           setState(() {
@@ -68,7 +107,7 @@ class _SHSliderState extends State<SHSlider> with SingleTickerProviderStateMixin
             offset = Offset(onPanDown.localPosition.dx, offset.dy);
           });
         },),)
-    ],);
+    ]),);
   }
 }
 
@@ -77,31 +116,50 @@ class Pointer extends CustomPainter{
 
   Offset offset;
   ui.Image image;
-  Pointer(this.offset, this.image);
+  int divisions;
+  double min, max;
+  String unit;
+  double fontSize;
+  double padding;
+  double lineWidth;
+  Color backgroundColor;
+  Color color;
+  final void Function(double value) callback;
+  Pointer({
+    this.offset,
+    this.image,
+    this.divisions,
+    this.min,
+    this.max,
+    this.unit,
+    this.padding,
+    this.fontSize,
+    this.color,
+    this.backgroundColor,
+    this.lineWidth,
+    this.callback
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = new Paint()
-      ..color = Colors.redAccent
+      ..color = backgroundColor
       ..style = PaintingStyle.fill;
-
-    double padding = size.width/6;
-    int divisions = 6;
+    padding = this.padding == null?size.width/6: this.padding;
     double segment = (size.width - 2*padding)/divisions;
 
-    double min = 0;
-    double max = 10;
-    String unit = 'Kg';
-
-    double fontSize = 20;
-    
+    divisions = divisions !=null? divisions:((max - min) < 0?(max - min)*10:(max - min));
     double dx = (((offset.dx.floor() - padding/2)~/segment).toInt())*segment;
     dx = (dx > size.width - 2*padding)?(size.width - 2*padding):dx;
+    dx  = dx < padding/divisions? 0: dx;
     Offset reOffset = Offset(dx + padding, size.height/2);
 
+    double pox = min + (((reOffset.dx-padding)/segment)*((max - min)/divisions));
 
-    paint..strokeWidth = 8;
-    paint..color = Colors.green.withOpacity(0.5);
+    callback(pox);
+
+    paint..strokeWidth = lineWidth;
+    paint..color = backgroundColor;
     paint..strokeCap = StrokeCap.round;
     canvas.drawLine(Offset(9.9*padding/10, size.height/2), Offset(size.width - 9.9*padding/10, size.height/2), paint);
 
@@ -118,10 +176,10 @@ class Pointer extends CustomPainter{
     maxTp.paint(canvas, Offset(size.width - padding + 6, size.height/2 - fontSize/2));
 
     for(int i = 0; i <= divisions; i ++){
-      canvas.drawCircle(Offset(padding + i*segment, size.height/2), 2, paint..color = Colors.deepPurpleAccent);
+      canvas.drawCircle(Offset(padding + i*segment, size.height/2), 2, paint..color = color);
     }
 
-    canvas.drawCircle(reOffset, 30, paint..color = Colors.deepPurpleAccent);
+    canvas.drawCircle(reOffset, 30, paint..color = backgroundColor);
 
     Path path = Path();
     path.moveTo(reOffset.dx, reOffset.dy - 35);
@@ -130,9 +188,9 @@ class Pointer extends CustomPainter{
     path.close();
     canvas.drawPath(path, paint);
     canvas.drawShadow(path, Colors.grey, 2.0, true);
-    canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(reOffset.dx - 35, reOffset.dy - 80, 70, 40),Radius.circular(10.0)),paint..color = Colors.deepPurpleAccent);
+    canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(reOffset.dx - 35, reOffset.dy - 80, 70, 40),Radius.circular(10.0)),paint..color = backgroundColor);
 
-    TextSpan span = new TextSpan(style: new TextStyle(color: Colors.white, fontSize: fontSize), text: '2.0 $unit');
+    TextSpan span = new TextSpan(style: new TextStyle(color: Colors.white, fontSize: fontSize), text: '${pox.toStringAsFixed(1)} $unit');
     TextPainter tp = new TextPainter(text: span, textAlign: TextAlign.left, textDirection: TextDirection.ltr);
     tp.layout();
     tp.paint(canvas, Offset(reOffset.dx - (span.text.length/2)*fontSize/2, reOffset.dy - 60 - (0.5*fontSize)));
